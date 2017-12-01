@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RecognizeBox" customModule="Captuocr" customModuleProvider="target">
+            <connections>
+                <outlet property="imageArea" destination="hnk-aa-aEb" id="Q5K-eu-cWl"/>
+                <outlet property="layout" destination="Hz6-mo-xeY" id="mpn-1F-7c1"/>
+                <outlet property="textArea" destination="CuA-eb-uWn" id="QbC-p5-QJw"/>
+                <outlet property="vLine" destination="c5F-5y-Cao" id="pJv-Qm-PoJ"/>
+                <outlet property="vLineCenter" destination="Sfj-zi-3r6" id="cMY-ZD-y9A"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="834" height="474"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="c5F-5y-Cao">
+                    <rect key="frame" x="415" y="0.0" width="5" height="474"/>
+                </box>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hnk-aa-aEb">
+                    <rect key="frame" x="12" y="12" width="393" height="450"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="393" id="A24-gG-GuA"/>
+                        <constraint firstAttribute="height" constant="450" id="lvL-7w-s0F"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="enF-nN-6Vo"/>
+                </imageView>
+                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J12-5a-WMA">
+                    <rect key="frame" x="430" y="12" width="392" height="450"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="XaE-9u-qeo">
+                        <rect key="frame" x="0.0" y="0.0" width="377" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="CuA-eb-uWn">
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="450"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <size key="minSize" width="377" height="450"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Yjv-eb-Mqf">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="f57-RN-696">
+                        <rect key="frame" x="377" y="0.0" width="15" height="450"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hnk-aa-aEb" secondAttribute="bottom" constant="12" id="2ZX-Sc-yf9"/>
+                <constraint firstItem="hnk-aa-aEb" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="2ic-aE-d71"/>
+                <constraint firstItem="c5F-5y-Cao" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Pgb-e5-LJB"/>
+                <constraint firstItem="J12-5a-WMA" firstAttribute="leading" secondItem="c5F-5y-Cao" secondAttribute="trailing" constant="12" id="RgD-7k-3BI"/>
+                <constraint firstItem="c5F-5y-Cao" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Sfj-zi-3r6"/>
+                <constraint firstAttribute="trailing" secondItem="J12-5a-WMA" secondAttribute="trailing" constant="12" id="So1-2C-v7N"/>
+                <constraint firstItem="hnk-aa-aEb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="VVd-OO-OED"/>
+                <constraint firstItem="c5F-5y-Cao" firstAttribute="leading" secondItem="hnk-aa-aEb" secondAttribute="trailing" constant="12" id="WdX-Lb-sDD"/>
+                <constraint firstAttribute="bottom" secondItem="J12-5a-WMA" secondAttribute="bottom" constant="12" id="hDB-39-5hJ"/>
+                <constraint firstAttribute="bottom" secondItem="c5F-5y-Cao" secondAttribute="bottom" id="ido-j5-d5E"/>
+                <constraint firstItem="J12-5a-WMA" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="jHH-Xc-236"/>
+            </constraints>
+            <point key="canvasLocation" x="87" y="203"/>
+        </customView>
+    </objects>
+</document>

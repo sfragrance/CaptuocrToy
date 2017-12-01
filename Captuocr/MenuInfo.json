@@ -1,0 +1,40 @@
+{
+    "menu": [
+             {
+             "is_separator": false,
+             "title": "截图识字",
+             "key": "c",
+             "selector": "capturePic"
+             },
+             {
+             "is_separator": false,
+             "title": "选择文件",
+             "key": "s",
+             "selector": "selectPic"
+             },
+             {
+             "is_separator": true,
+             "title": "",
+             "key": "",
+             "selector": ""
+             },
+             {
+             "is_separator": false,
+             "title": "识别结果",
+             "key": "r",
+             "selector": "history"
+             },
+             {
+             "is_separator": false,
+             "title": "首选项",
+             "key": "o",
+             "selector": "option"
+             },
+             {
+             "is_separator": false,
+             "title": "退出",
+             "key": "q",
+             "selector": "quit"
+             }
+             ]
+}

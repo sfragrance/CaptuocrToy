@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		520789201FD1533200453091 /* RecognizeBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207891F1FD1533200453091 /* RecognizeBoxViewModel.swift */; };
+		525274471FCF9CB900C6EC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525274461FCF9CB900C6EC4D /* AppDelegate.swift */; };
+		525274491FCF9CB900C6EC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525274481FCF9CB900C6EC4D /* ViewController.swift */; };
+		5252744B1FCF9CB900C6EC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5252744A1FCF9CB900C6EC4D /* Assets.xcassets */; };
+		5252744E1FCF9CB900C6EC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5252744C1FCF9CB900C6EC4D /* Main.storyboard */; };
+		529AEC951FCFFDC500528691 /* ClosureSleeve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEC941FCFFDC500528691 /* ClosureSleeve.swift */; };
+		529AEC971FD0051C00528691 /* MenuInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 529AEC961FD0051C00528691 /* MenuInfo.json */; };
+		529AEC991FD0124600528691 /* MenuInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEC981FD0124600528691 /* MenuInfo.swift */; };
+		52C9B3901FCFE79300F6F356 /* StatusBarCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9B38F1FCFE79300F6F356 /* StatusBarCenter.swift */; };
+		52E015C71FD0E70F00F67BED /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015C61FD0E70F00F67BED /* Settings.swift */; };
+		52E015D71FD0EC0B00F67BED /* Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015D61FD0EC0B00F67BED /* Appearence.swift */; };
+		52E015E41FD0FF5600F67BED /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015E31FD0FF5600F67BED /* Recognizer.swift */; };
+		52E015E61FD1013600F67BED /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015E51FD1013600F67BED /* Utils.swift */; };
+		52E015E81FD11BC400F67BED /* BaiduOauthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015E71FD11BC400F67BED /* BaiduOauthToken.swift */; };
+		52E015EA1FD1338D00F67BED /* BaiduRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015E91FD1338D00F67BED /* BaiduRecognizer.swift */; };
+		52E015F21FD13F0900F67BED /* RecognizeBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015F01FD13F0900F67BED /* RecognizeBoxViewController.swift */; };
+		52E015F31FD13F0900F67BED /* RecognizeBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E015F11FD13F0900F67BED /* RecognizeBox.xib */; };
+		A262672E2D0AF6A0188A96B2 /* Pods_Captuocr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D39AE7508002C287547EF02 /* Pods_Captuocr.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D39AE7508002C287547EF02 /* Pods_Captuocr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Captuocr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5207891F1FD1533200453091 /* RecognizeBoxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeBoxViewModel.swift; sourceTree = "<group>"; };
+		525274431FCF9CB900C6EC4D /* Captuocr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captuocr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		525274461FCF9CB900C6EC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		525274481FCF9CB900C6EC4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5252744A1FCF9CB900C6EC4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5252744D1FCF9CB900C6EC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5252744F1FCF9CB900C6EC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525274501FCF9CB900C6EC4D /* Captuocr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Captuocr.entitlements; sourceTree = "<group>"; };
+		529AEC941FCFFDC500528691 /* ClosureSleeve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureSleeve.swift; sourceTree = "<group>"; };
+		529AEC961FD0051C00528691 /* MenuInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MenuInfo.json; sourceTree = "<group>"; };
+		529AEC981FD0124600528691 /* MenuInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInfo.swift; sourceTree = "<group>"; };
+		52C9B38F1FCFE79300F6F356 /* StatusBarCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarCenter.swift; sourceTree = "<group>"; };
+		52E015C61FD0E70F00F67BED /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		52E015D61FD0EC0B00F67BED /* Appearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearence.swift; sourceTree = "<group>"; };
+		52E015E31FD0FF5600F67BED /* Recognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
+		52E015E51FD1013600F67BED /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		52E015E71FD11BC400F67BED /* BaiduOauthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduOauthToken.swift; sourceTree = "<group>"; };
+		52E015E91FD1338D00F67BED /* BaiduRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduRecognizer.swift; sourceTree = "<group>"; };
+		52E015F01FD13F0900F67BED /* RecognizeBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeBoxViewController.swift; sourceTree = "<group>"; };
+		52E015F11FD13F0900F67BED /* RecognizeBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecognizeBox.xib; sourceTree = "<group>"; };
+		813B363FAD1FED60BE46C163 /* Pods-Captuocr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captuocr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Captuocr/Pods-Captuocr.release.xcconfig"; sourceTree = "<group>"; };
+		CD7B71F3A0D7272EDD3F25FF /* Pods-Captuocr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captuocr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Captuocr/Pods-Captuocr.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		525274401FCF9CB900C6EC4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A262672E2D0AF6A0188A96B2 /* Pods_Captuocr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B9BA1C32D49BCC043DA9B2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D39AE7508002C287547EF02 /* Pods_Captuocr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5252743A1FCF9CB900C6EC4D = {
+			isa = PBXGroup;
+			children = (
+				525274451FCF9CB900C6EC4D /* Captuocr */,
+				525274441FCF9CB900C6EC4D /* Products */,
+				A96C847A36A2E8258C9B4A93 /* Pods */,
+				2B9BA1C32D49BCC043DA9B2B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		525274441FCF9CB900C6EC4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				525274431FCF9CB900C6EC4D /* Captuocr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		525274451FCF9CB900C6EC4D /* Captuocr */ = {
+			isa = PBXGroup;
+			children = (
+				52E015EB1FD13C4700F67BED /* Layout */,
+				52E015E21FD0FE5900F67BED /* Network */,
+				52E015D51FD0EBDB00F67BED /* Utils */,
+				52E015D41FD0EBC100F67BED /* Models */,
+				525274461FCF9CB900C6EC4D /* AppDelegate.swift */,
+				525274481FCF9CB900C6EC4D /* ViewController.swift */,
+				5252744A1FCF9CB900C6EC4D /* Assets.xcassets */,
+				5252744C1FCF9CB900C6EC4D /* Main.storyboard */,
+				5252744F1FCF9CB900C6EC4D /* Info.plist */,
+				525274501FCF9CB900C6EC4D /* Captuocr.entitlements */,
+				529AEC961FD0051C00528691 /* MenuInfo.json */,
+			);
+			path = Captuocr;
+			sourceTree = "<group>";
+		};
+		52E015D41FD0EBC100F67BED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				529AEC941FCFFDC500528691 /* ClosureSleeve.swift */,
+				529AEC981FD0124600528691 /* MenuInfo.swift */,
+				52E015D61FD0EC0B00F67BED /* Appearence.swift */,
+				52E015E71FD11BC400F67BED /* BaiduOauthToken.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		52E015D51FD0EBDB00F67BED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				52C9B38F1FCFE79300F6F356 /* StatusBarCenter.swift */,
+				52E015C61FD0E70F00F67BED /* Settings.swift */,
+				52E015E51FD1013600F67BED /* Utils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		52E015E21FD0FE5900F67BED /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				52E015E31FD0FF5600F67BED /* Recognizer.swift */,
+				52E015E91FD1338D00F67BED /* BaiduRecognizer.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		52E015EB1FD13C4700F67BED /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				52E015F01FD13F0900F67BED /* RecognizeBoxViewController.swift */,
+				52E015F11FD13F0900F67BED /* RecognizeBox.xib */,
+				5207891F1FD1533200453091 /* RecognizeBoxViewModel.swift */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		A96C847A36A2E8258C9B4A93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD7B71F3A0D7272EDD3F25FF /* Pods-Captuocr.debug.xcconfig */,
+				813B363FAD1FED60BE46C163 /* Pods-Captuocr.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		525274421FCF9CB900C6EC4D /* Captuocr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 525274531FCF9CB900C6EC4D /* Build configuration list for PBXNativeTarget "Captuocr" */;
+			buildPhases = (
+				72699DADE584D1D72D97A3DD /* [CP] Check Pods Manifest.lock */,
+				5252743F1FCF9CB900C6EC4D /* Sources */,
+				525274401FCF9CB900C6EC4D /* Frameworks */,
+				525274411FCF9CB900C6EC4D /* Resources */,
+				74D2D50A595413134D10F079 /* [CP] Embed Pods Frameworks */,
+				E1A9AE1E45938CB9646A5B0B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Captuocr;
+			productName = Captuocr;
+			productReference = 525274431FCF9CB900C6EC4D /* Captuocr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5252743B1FCF9CB900C6EC4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Gragrance;
+				TargetAttributes = {
+					525274421FCF9CB900C6EC4D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5252743E1FCF9CB900C6EC4D /* Build configuration list for PBXProject "Captuocr" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5252743A1FCF9CB900C6EC4D;
+			productRefGroup = 525274441FCF9CB900C6EC4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				525274421FCF9CB900C6EC4D /* Captuocr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		525274411FCF9CB900C6EC4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E015F31FD13F0900F67BED /* RecognizeBox.xib in Resources */,
+				5252744B1FCF9CB900C6EC4D /* Assets.xcassets in Resources */,
+				529AEC971FD0051C00528691 /* MenuInfo.json in Resources */,
+				5252744E1FCF9CB900C6EC4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72699DADE584D1D72D97A3DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Captuocr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74D2D50A595413134D10F079 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Captuocr/Pods-Captuocr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/EVReflection/EVReflection.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectPropertyLoader/SwinjectPropertyLoader.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVReflection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectPropertyLoader.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Captuocr/Pods-Captuocr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1A9AE1E45938CB9646A5B0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Captuocr/Pods-Captuocr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5252743F1FCF9CB900C6EC4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E015D71FD0EC0B00F67BED /* Appearence.swift in Sources */,
+				520789201FD1533200453091 /* RecognizeBoxViewModel.swift in Sources */,
+				52C9B3901FCFE79300F6F356 /* StatusBarCenter.swift in Sources */,
+				52E015E61FD1013600F67BED /* Utils.swift in Sources */,
+				525274491FCF9CB900C6EC4D /* ViewController.swift in Sources */,
+				52E015F21FD13F0900F67BED /* RecognizeBoxViewController.swift in Sources */,
+				52E015E41FD0FF5600F67BED /* Recognizer.swift in Sources */,
+				529AEC991FD0124600528691 /* MenuInfo.swift in Sources */,
+				52E015EA1FD1338D00F67BED /* BaiduRecognizer.swift in Sources */,
+				525274471FCF9CB900C6EC4D /* AppDelegate.swift in Sources */,
+				529AEC951FCFFDC500528691 /* ClosureSleeve.swift in Sources */,
+				52E015C71FD0E70F00F67BED /* Settings.swift in Sources */,
+				52E015E81FD11BC400F67BED /* BaiduOauthToken.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5252744C1FCF9CB900C6EC4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5252744D1FCF9CB900C6EC4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		525274511FCF9CB900C6EC4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		525274521FCF9CB900C6EC4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		525274541FCF9CB900C6EC4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD7B71F3A0D7272EDD3F25FF /* Pods-Captuocr.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Captuocr/Captuocr.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Captuocr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Gragrance.Captuocr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		525274551FCF9CB900C6EC4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 813B363FAD1FED60BE46C163 /* Pods-Captuocr.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Captuocr/Captuocr.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Captuocr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Gragrance.Captuocr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5252743E1FCF9CB900C6EC4D /* Build configuration list for PBXProject "Captuocr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				525274511FCF9CB900C6EC4D /* Debug */,
+				525274521FCF9CB900C6EC4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		525274531FCF9CB900C6EC4D /* Build configuration list for PBXNativeTarget "Captuocr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				525274541FCF9CB900C6EC4D /* Debug */,
+				525274551FCF9CB900C6EC4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5252743B1FCF9CB900C6EC4D /* Project object */;
+}
