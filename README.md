@@ -18,3 +18,6 @@ cd CaptuocrToy
 pod update
 BuildArea/autobuild.sh
 ```
+
+# Release 
+https://github.com/gragrance/CaptuocrToy/releases 
