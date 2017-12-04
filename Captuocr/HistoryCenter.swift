@@ -64,13 +64,13 @@ class HistoryCenter {
             return hr
         }
     }
-    
-    func getImgBase64(id:Int) -> String?{
-        let query = HISTORY_TABLE.filter(self.HISTORY_COLUMN_ID == id)
-        if let matchRecord = try? db.prepare(query), let match = (matchRecord.first{_ in true} ){
+
+    func getImgBase64(id: Int) -> String? {
+        let query = HISTORY_TABLE.filter(HISTORY_COLUMN_ID == id)
+        if let matchRecord = try? db.prepare(query), let match = (matchRecord.first { _ in true }) {
             return match[self.HISTORY_COLUMN_IMGBASE64]
         }
-        
+
         return nil
     }
 }

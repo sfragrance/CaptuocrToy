@@ -11,7 +11,7 @@ import Cocoa
 class HistoryWindowController: NSWindowController {
 
     @IBOutlet var tableView: NSTableView!
-    @IBOutlet weak var contentView: NSView!
+    @IBOutlet var contentView: NSView!
     let viewmodel = HistoryViewModel()
     var setting: Settings!
     var historyCenter: HistoryCenter!
