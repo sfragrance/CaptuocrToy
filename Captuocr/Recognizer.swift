@@ -9,6 +9,5 @@
 import Foundation
 
 protocol Recognizer {
-    func recognize(picBase64: String) throws -> String
     func recognize(picBase64: String, progress: ((Double) -> Void)?) throws -> String
 }

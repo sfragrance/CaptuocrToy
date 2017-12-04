@@ -8,14 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		520789201FD1533200453091 /* RecognizeBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207891F1FD1533200453091 /* RecognizeBoxViewModel.swift */; };
+		5219A08E1FD3BB5A00725B9E /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219A08D1FD3BB5A00725B9E /* DoubleExtension.swift */; };
+		5219A09D1FD3EDC600725B9E /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219A09B1FD3EDC600725B9E /* PreferenceWindowController.swift */; };
+		5219A09E1FD3EDC600725B9E /* PreferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5219A09C1FD3EDC600725B9E /* PreferenceWindow.xib */; };
+		5219A0A11FD419C200725B9E /* PreferenceGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219A09F1FD419C200725B9E /* PreferenceGeneralViewController.swift */; };
+		5219A0A21FD419C200725B9E /* PreferenceGeneralView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5219A0A01FD419C200725B9E /* PreferenceGeneralView.xib */; };
+		5219A0A51FD419F100725B9E /* PreferenceOcrapiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219A0A31FD419F100725B9E /* PreferenceOcrapiViewController.swift */; };
+		5219A0A61FD419F100725B9E /* PreferenceOcrapiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5219A0A41FD419F100725B9E /* PreferenceOcrapiView.xib */; };
+		5219A0A81FD42AE300725B9E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5219A0A71FD42AE300725B9E /* Carbon.framework */; };
+		5219A0AA1FD441FD00725B9E /* PreferenceOcrapiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219A0A91FD441FD00725B9E /* PreferenceOcrapiViewModel.swift */; };
 		525274471FCF9CB900C6EC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525274461FCF9CB900C6EC4D /* AppDelegate.swift */; };
 		525274491FCF9CB900C6EC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525274481FCF9CB900C6EC4D /* ViewController.swift */; };
 		5252744B1FCF9CB900C6EC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5252744A1FCF9CB900C6EC4D /* Assets.xcassets */; };
 		5252744E1FCF9CB900C6EC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5252744C1FCF9CB900C6EC4D /* Main.storyboard */; };
+		5278D2511FD4E7380015EE78 /* PreferenceGeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278D2501FD4E7380015EE78 /* PreferenceGeneralViewModel.swift */; };
+		5278D2541FD4F6A60015EE78 /* HistoryWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278D2521FD4F6A60015EE78 /* HistoryWindowController.swift */; };
+		5278D2551FD4F6A60015EE78 /* HistoryWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5278D2531FD4F6A60015EE78 /* HistoryWindow.xib */; };
+		5278D2571FD50BE90015EE78 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278D2561FD50BE90015EE78 /* HistoryViewModel.swift */; };
+		5278D2591FD50CC30015EE78 /* HistoryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278D2581FD50CC30015EE78 /* HistoryRecord.swift */; };
+		5278D26A1FD51F7B0015EE78 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5278D2691FD51F7B0015EE78 /* HistoryCell.xib */; };
+		527971781FD52024009C4333 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527971771FD52024009C4333 /* HistoryCell.swift */; };
+		5279717A1FD527DD009C4333 /* HistoryCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527971791FD527DD009C4333 /* HistoryCenter.swift */; };
 		529AEC951FCFFDC500528691 /* ClosureSleeve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEC941FCFFDC500528691 /* ClosureSleeve.swift */; };
 		529AEC971FD0051C00528691 /* MenuInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 529AEC961FD0051C00528691 /* MenuInfo.json */; };
 		529AEC991FD0124600528691 /* MenuInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEC981FD0124600528691 /* MenuInfo.swift */; };
 		52C9B3901FCFE79300F6F356 /* StatusBarCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9B38F1FCFE79300F6F356 /* StatusBarCenter.swift */; };
+		52D9C05E1FD39A8F008494F3 /* GoogleVisionRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C05D1FD39A8F008494F3 /* GoogleVisionRecognizer.swift */; };
+		52D9C0601FD39E87008494F3 /* GoogleVisionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C05F1FD39E87008494F3 /* GoogleVisionRequest.swift */; };
+		52D9C0621FD3B60C008494F3 /* GoogleVisionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C0611FD3B60C008494F3 /* GoogleVisionResponse.swift */; };
 		52E015C71FD0E70F00F67BED /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015C61FD0E70F00F67BED /* Settings.swift */; };
 		52E015D71FD0EC0B00F67BED /* Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015D61FD0EC0B00F67BED /* Appearence.swift */; };
 		52E015E41FD0FF5600F67BED /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E015E31FD0FF5600F67BED /* Recognizer.swift */; };
@@ -30,6 +50,15 @@
 /* Begin PBXFileReference section */
 		1D39AE7508002C287547EF02 /* Pods_Captuocr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Captuocr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5207891F1FD1533200453091 /* RecognizeBoxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeBoxViewModel.swift; sourceTree = "<group>"; };
+		5219A08D1FD3BB5A00725B9E /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		5219A09B1FD3EDC600725B9E /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
+		5219A09C1FD3EDC600725B9E /* PreferenceWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferenceWindow.xib; sourceTree = "<group>"; };
+		5219A09F1FD419C200725B9E /* PreferenceGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceGeneralViewController.swift; sourceTree = "<group>"; };
+		5219A0A01FD419C200725B9E /* PreferenceGeneralView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferenceGeneralView.xib; sourceTree = "<group>"; };
+		5219A0A31FD419F100725B9E /* PreferenceOcrapiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceOcrapiViewController.swift; sourceTree = "<group>"; };
+		5219A0A41FD419F100725B9E /* PreferenceOcrapiView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferenceOcrapiView.xib; sourceTree = "<group>"; };
+		5219A0A71FD42AE300725B9E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		5219A0A91FD441FD00725B9E /* PreferenceOcrapiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceOcrapiViewModel.swift; sourceTree = "<group>"; };
 		525274431FCF9CB900C6EC4D /* Captuocr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captuocr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525274461FCF9CB900C6EC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		525274481FCF9CB900C6EC4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,10 +66,21 @@
 		5252744D1FCF9CB900C6EC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5252744F1FCF9CB900C6EC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525274501FCF9CB900C6EC4D /* Captuocr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Captuocr.entitlements; sourceTree = "<group>"; };
+		5278D2501FD4E7380015EE78 /* PreferenceGeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceGeneralViewModel.swift; sourceTree = "<group>"; };
+		5278D2521FD4F6A60015EE78 /* HistoryWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWindowController.swift; sourceTree = "<group>"; };
+		5278D2531FD4F6A60015EE78 /* HistoryWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryWindow.xib; sourceTree = "<group>"; };
+		5278D2561FD50BE90015EE78 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		5278D2581FD50CC30015EE78 /* HistoryRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRecord.swift; sourceTree = "<group>"; };
+		5278D2691FD51F7B0015EE78 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		527971771FD52024009C4333 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		527971791FD527DD009C4333 /* HistoryCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCenter.swift; sourceTree = "<group>"; };
 		529AEC941FCFFDC500528691 /* ClosureSleeve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureSleeve.swift; sourceTree = "<group>"; };
 		529AEC961FD0051C00528691 /* MenuInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MenuInfo.json; sourceTree = "<group>"; };
 		529AEC981FD0124600528691 /* MenuInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInfo.swift; sourceTree = "<group>"; };
 		52C9B38F1FCFE79300F6F356 /* StatusBarCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarCenter.swift; sourceTree = "<group>"; };
+		52D9C05D1FD39A8F008494F3 /* GoogleVisionRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVisionRecognizer.swift; sourceTree = "<group>"; };
+		52D9C05F1FD39E87008494F3 /* GoogleVisionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVisionRequest.swift; sourceTree = "<group>"; };
+		52D9C0611FD3B60C008494F3 /* GoogleVisionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVisionResponse.swift; sourceTree = "<group>"; };
 		52E015C61FD0E70F00F67BED /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		52E015D61FD0EC0B00F67BED /* Appearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearence.swift; sourceTree = "<group>"; };
 		52E015E31FD0FF5600F67BED /* Recognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
@@ -58,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5219A0A81FD42AE300725B9E /* Carbon.framework in Frameworks */,
 				A262672E2D0AF6A0188A96B2 /* Pods_Captuocr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +109,7 @@
 		2B9BA1C32D49BCC043DA9B2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5219A0A71FD42AE300725B9E /* Carbon.framework */,
 				1D39AE7508002C287547EF02 /* Pods_Captuocr.framework */,
 			);
 			name = Frameworks;
@@ -116,6 +158,9 @@
 				529AEC981FD0124600528691 /* MenuInfo.swift */,
 				52E015D61FD0EC0B00F67BED /* Appearence.swift */,
 				52E015E71FD11BC400F67BED /* BaiduOauthToken.swift */,
+				52D9C05F1FD39E87008494F3 /* GoogleVisionRequest.swift */,
+				52D9C0611FD3B60C008494F3 /* GoogleVisionResponse.swift */,
+				5278D2581FD50CC30015EE78 /* HistoryRecord.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -126,6 +171,8 @@
 				52C9B38F1FCFE79300F6F356 /* StatusBarCenter.swift */,
 				52E015C61FD0E70F00F67BED /* Settings.swift */,
 				52E015E51FD1013600F67BED /* Utils.swift */,
+				5219A08D1FD3BB5A00725B9E /* DoubleExtension.swift */,
+				527971791FD527DD009C4333 /* HistoryCenter.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -135,6 +182,7 @@
 			children = (
 				52E015E31FD0FF5600F67BED /* Recognizer.swift */,
 				52E015E91FD1338D00F67BED /* BaiduRecognizer.swift */,
+				52D9C05D1FD39A8F008494F3 /* GoogleVisionRecognizer.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -145,6 +193,19 @@
 				52E015F01FD13F0900F67BED /* RecognizeBoxViewController.swift */,
 				52E015F11FD13F0900F67BED /* RecognizeBox.xib */,
 				5207891F1FD1533200453091 /* RecognizeBoxViewModel.swift */,
+				5219A09B1FD3EDC600725B9E /* PreferenceWindowController.swift */,
+				5219A09C1FD3EDC600725B9E /* PreferenceWindow.xib */,
+				5219A09F1FD419C200725B9E /* PreferenceGeneralViewController.swift */,
+				5278D2501FD4E7380015EE78 /* PreferenceGeneralViewModel.swift */,
+				5219A0A01FD419C200725B9E /* PreferenceGeneralView.xib */,
+				5219A0A31FD419F100725B9E /* PreferenceOcrapiViewController.swift */,
+				5219A0A41FD419F100725B9E /* PreferenceOcrapiView.xib */,
+				5219A0A91FD441FD00725B9E /* PreferenceOcrapiViewModel.swift */,
+				5278D2521FD4F6A60015EE78 /* HistoryWindowController.swift */,
+				5278D2531FD4F6A60015EE78 /* HistoryWindow.xib */,
+				5278D2561FD50BE90015EE78 /* HistoryViewModel.swift */,
+				5278D2691FD51F7B0015EE78 /* HistoryCell.xib */,
+				527971771FD52024009C4333 /* HistoryCell.swift */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -220,7 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5219A0A21FD419C200725B9E /* PreferenceGeneralView.xib in Resources */,
+				5278D26A1FD51F7B0015EE78 /* HistoryCell.xib in Resources */,
 				52E015F31FD13F0900F67BED /* RecognizeBox.xib in Resources */,
+				5219A0A61FD419F100725B9E /* PreferenceOcrapiView.xib in Resources */,
+				5219A09E1FD3EDC600725B9E /* PreferenceWindow.xib in Resources */,
+				5278D2551FD4F6A60015EE78 /* HistoryWindow.xib in Resources */,
 				5252744B1FCF9CB900C6EC4D /* Assets.xcassets in Resources */,
 				529AEC971FD0051C00528691 /* MenuInfo.json in Resources */,
 				5252744E1FCF9CB900C6EC4D /* Main.storyboard in Resources */,
@@ -261,6 +327,7 @@
 				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
 				"${BUILT_PRODUCTS_DIR}/EVReflection/EVReflection.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectPropertyLoader/SwinjectPropertyLoader.framework",
 			);
@@ -272,6 +339,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVReflection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectPropertyLoader.framework",
 			);
@@ -303,17 +371,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E015D71FD0EC0B00F67BED /* Appearence.swift in Sources */,
+				5219A0A51FD419F100725B9E /* PreferenceOcrapiViewController.swift in Sources */,
+				5219A08E1FD3BB5A00725B9E /* DoubleExtension.swift in Sources */,
 				520789201FD1533200453091 /* RecognizeBoxViewModel.swift in Sources */,
 				52C9B3901FCFE79300F6F356 /* StatusBarCenter.swift in Sources */,
+				5219A09D1FD3EDC600725B9E /* PreferenceWindowController.swift in Sources */,
 				52E015E61FD1013600F67BED /* Utils.swift in Sources */,
+				5278D2571FD50BE90015EE78 /* HistoryViewModel.swift in Sources */,
 				525274491FCF9CB900C6EC4D /* ViewController.swift in Sources */,
+				5278D2591FD50CC30015EE78 /* HistoryRecord.swift in Sources */,
 				52E015F21FD13F0900F67BED /* RecognizeBoxViewController.swift in Sources */,
+				5219A0AA1FD441FD00725B9E /* PreferenceOcrapiViewModel.swift in Sources */,
+				52D9C05E1FD39A8F008494F3 /* GoogleVisionRecognizer.swift in Sources */,
 				52E015E41FD0FF5600F67BED /* Recognizer.swift in Sources */,
 				529AEC991FD0124600528691 /* MenuInfo.swift in Sources */,
+				52D9C0621FD3B60C008494F3 /* GoogleVisionResponse.swift in Sources */,
+				527971781FD52024009C4333 /* HistoryCell.swift in Sources */,
+				5278D2541FD4F6A60015EE78 /* HistoryWindowController.swift in Sources */,
+				52D9C0601FD39E87008494F3 /* GoogleVisionRequest.swift in Sources */,
+				5219A0A11FD419C200725B9E /* PreferenceGeneralViewController.swift in Sources */,
 				52E015EA1FD1338D00F67BED /* BaiduRecognizer.swift in Sources */,
+				5279717A1FD527DD009C4333 /* HistoryCenter.swift in Sources */,
 				525274471FCF9CB900C6EC4D /* AppDelegate.swift in Sources */,
 				529AEC951FCFFDC500528691 /* ClosureSleeve.swift in Sources */,
 				52E015C71FD0E70F00F67BED /* Settings.swift in Sources */,
+				5278D2511FD4E7380015EE78 /* PreferenceGeneralViewModel.swift in Sources */,
 				52E015E81FD11BC400F67BED /* BaiduOauthToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

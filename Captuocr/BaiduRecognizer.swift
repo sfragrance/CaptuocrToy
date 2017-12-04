@@ -11,10 +11,6 @@ import Async
 import Foundation
 
 class BaiduRecognizer: Recognizer {
-    func recognize(picBase64: String) throws -> String {
-        return try recognize(picBase64: picBase64, progress: nil)
-    }
-
     func recognize(picBase64: String, progress: ((Double) -> Void)? = nil) throws -> String {
         progress?(0)
         guard let setting = AppDelegate.container.resolve(Settings.self), setting.appearence.apitype == .baiduocr else {
@@ -61,7 +57,7 @@ class BaiduRecognizer: Recognizer {
 
         let rq = Alamofire.upload(data!, to: urlRequest.url!)
         rq.uploadProgress(queue: .global(qos: .background)) { p in
-            progress?(0.2 + 0.6 * p.fractionCompleted)
+            progress?(0.2 + (0.6 * p.fractionCompleted).rounded(toPlaces: 3))
         }
         rq.responseString(
             queue: .global(qos: .background),

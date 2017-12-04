@@ -9,6 +9,7 @@
 import Alamofire
 import AppKit
 import Async
+import Carbon
 import Foundation
 import CoreImage
 
@@ -16,26 +17,36 @@ class StatusBarCenter {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let tarMenu = NSMenu()
     let popover = NSPopover()
-    let recognizeVc: RecognizeBoxViewController
+    var recognizeVc: RecognizeBoxViewController
     let setting: Settings
+    let menuinfos: [MenuInfo]
+    let historyCenter: HistoryCenter
     init(minfos: [MenuInfo]) {
         setting = AppDelegate.container.resolve(Settings.self)!
-
+        historyCenter = AppDelegate.container.resolve(HistoryCenter.self)!
         popover.behavior = .transient
         recognizeVc = RecognizeBoxViewController(nibName: NSNib.Name("RecognizeBox"), bundle: Bundle.main)
         popover.contentViewController = recognizeVc
-
+        menuinfos = minfos
         let icon = NSImage(named: NSImage.Name("icons8-text-16"))
         icon?.isTemplate = true
         statusItem.image = icon
         statusItem.menu = tarMenu
 
-        minfos.map {
+        buildMenu()
+    }
+
+    private func buildMenu() {
+        tarMenu.removeAllItems()
+        menuinfos.map {
             $0.is_separator
                 ? NSMenuItem.separator()
                 : NSMenuItem(title: $0.title, action: NSSelectorFromString($0.selector), keyEquivalent: $0.key)
         }.forEach {
-            $0.target = self
+            if !$0.isSeparatorItem {
+                $0.target = self
+                $0.keyEquivalentModifierMask = NSEvent.ModifierFlags(rawValue: UInt(Int(NSEvent.ModifierFlags.command.rawValue | NSEvent.ModifierFlags.shift.rawValue)))
+            }
             tarMenu.addItem($0)
         }
     }
@@ -77,6 +88,21 @@ class StatusBarCenter {
     }
 
     @objc
+    func history() {
+        if let windowController = AppDelegate.container.resolve(HistoryWindowController.self) {
+            windowController.showWindow(self)
+        }
+    }
+
+    @objc
+    func preference() {
+        if let windowController = AppDelegate.container.resolve(PreferenceWindowController.self) {
+            windowController.reload()
+            windowController.showWindow(self)
+        }
+    }
+
+    @objc
     func quit() {
         NSApplication.shared.terminate(self)
     }
@@ -96,16 +122,26 @@ class StatusBarCenter {
                     Async.main {
                         self.statusItem.image = NSImage(named: NSImage.Name("icons8-text-16"))
                         self.statusItem.title = nil
+                        self.recognizeVc = RecognizeBoxViewController(nibName: NSNib.Name("RecognizeBox"), bundle: Bundle.main)
+                        self.recognizeVc.view.frame = NSRect(x: 0, y: 0, width: 834, height: 474)
+                        self.popover.contentViewController = self.recognizeVc
                         self.recognizeVc.viewmodel.image.value = base64
                         self.recognizeVc.viewmodel.recognizedText.value = final
                         self.showPopover()
                     }
-
+                    let record = HistoryRecord()
+                    record.txt = final
+                    record.imgBase64 = base64
+                    record.type = .ocr
+                    self.historyCenter.addRecord(record: record)
                 } catch {
                     print(error)
                     Async.main {
                         self.statusItem.image = NSImage(named: NSImage.Name("icons8-text-16"))
                         self.statusItem.title = nil
+                        self.recognizeVc = RecognizeBoxViewController(nibName: NSNib.Name("RecognizeBox"), bundle: Bundle.main)
+                        self.recognizeVc.view.frame = NSRect(x: 0, y: 0, width: 834, height: 474)
+                        self.popover.contentViewController = self.recognizeVc
                         self.recognizeVc.viewmodel.image.value = base64
                         self.recognizeVc.viewmodel.recognizedText.value = error.localizedDescription
                         self.showPopover()

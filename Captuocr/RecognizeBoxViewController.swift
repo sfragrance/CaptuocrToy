@@ -17,10 +17,18 @@ class RecognizeBoxViewController: NSViewController {
     @IBOutlet var vLineCenter: NSLayoutConstraint!
     @IBOutlet var imageArea: NSImageView!
     @IBOutlet var textArea: NSTextView!
+    @IBOutlet var imgHeight: NSLayoutConstraint!
+    @IBOutlet var imgWidth: NSLayoutConstraint!
     let viewmodel: RecognizeBoxViewModel = RecognizeBoxViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        view.reactive.keyPath("frame", ofExpectedType: NSRect.self, context: .immediateOnMain)
+            .observeNext {
+                self.imgWidth.constant = $0.width * (398 / 844)
+                self.imgHeight.constant = $0.height * (475 / 499)
+            }
+            .dispose(in: view.bag)
+
         bindViewModel()
     }
 }

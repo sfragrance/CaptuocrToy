@@ -9,6 +9,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="RecognizeBox" customModule="Captuocr" customModuleProvider="target">
             <connections>
                 <outlet property="imageArea" destination="hnk-aa-aEb" id="Q5K-eu-cWl"/>
+                <outlet property="imgHeight" destination="lvL-7w-s0F" id="dHQ-E9-g2h"/>
+                <outlet property="imgWidth" destination="A24-gG-GuA" id="SnE-R7-ByY"/>
                 <outlet property="layout" destination="Hz6-mo-xeY" id="mpn-1F-7c1"/>
                 <outlet property="textArea" destination="CuA-eb-uWn" id="QbC-p5-QJw"/>
                 <outlet property="vLine" destination="c5F-5y-Cao" id="pJv-Qm-PoJ"/>
