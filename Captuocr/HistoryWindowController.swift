@@ -23,4 +23,8 @@ class HistoryWindowController: NSWindowController {
         bindViewmodel()
         initialize()
     }
+    
+    func reload() {
+        initialize()
+    }
 }

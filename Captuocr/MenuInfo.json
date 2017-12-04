@@ -4,13 +4,31 @@
              "is_separator": false,
              "title": "截图识字",
              "key": "c",
-             "selector": "capturePic"
+             "selector": "capturePic4Txt"
              },
              {
              "is_separator": false,
              "title": "选择文件",
              "key": "s",
-             "selector": "selectPic"
+             "selector": "selectPic4Txt"
+             },
+             {
+             "is_separator": true,
+             "title": "",
+             "key": "",
+             "selector": ""
+             },
+             {
+             "is_separator": false,
+             "title": "截图识别二维码",
+             "key": null,
+             "selector": "capturePic4Qrcode"
+             },
+             {
+             "is_separator": false,
+             "title": "选择文件识别二维码",
+             "key": null,
+             "selector": "selectPic4Qrcode"
              },
              {
              "is_separator": true,
