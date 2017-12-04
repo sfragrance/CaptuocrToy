@@ -40,7 +40,7 @@ class StatusBarCenter {
         menuinfos.map {
             $0.is_separator
                 ? NSMenuItem.separator()
-                : NSMenuItem(title: $0.title, action: NSSelectorFromString($0.selector), keyEquivalent: $0.key)
+                : NSMenuItem(title: "\(NSLocalizedString($0.title, comment: ""))", action: NSSelectorFromString($0.selector), keyEquivalent: $0.key)
         }.forEach {
             if !$0.isSeparatorItem {
                 $0.target = self
@@ -62,7 +62,7 @@ class StatusBarCenter {
     @objc
     func selectPic() {
         let dialog = NSOpenPanel()
-        dialog.title = "选择图片"
+        dialog.title = NSLocalizedString("选择图片", comment: "")
         dialog.directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         dialog.showsResizeIndicator = true
         dialog.showsHiddenFiles = false
