@@ -16,9 +16,9 @@ class RecognizeBoxViewModel {
 
 extension RecognizeBoxViewController {
     func bindViewModel() {
-        if let setting = AppDelegate.container.resolve(Settings.self) {
-            textArea.font = NSFont.userFont(ofSize: CGFloat(setting.appearence.fontsize))
-        }
+        combineLatest(viewmodel.recognizedText, viewmodel.image).observeNext { (_) in
+            self.performFontSize()
+        }.dispose(in: imageArea.reactive.bag)
         viewmodel.recognizedText.bind(to: textArea.reactive.string).dispose(in: layout.bag)
         viewmodel.image.map { (base64) -> NSImage? in
             if let data = Data(base64Encoded: base64, options: Data.Base64DecodingOptions(rawValue: 0)) {
@@ -26,5 +26,11 @@ extension RecognizeBoxViewController {
             }
             return nil
         }.bind(to: imageArea.reactive.image)
+    }
+    
+    func performFontSize()  {
+        if let setting = AppDelegate.container.resolve(Settings.self) {
+            textArea.font = NSFont.userFont(ofSize: CGFloat(setting.appearence.fontsize))
+        }
     }
 }
