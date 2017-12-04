@@ -6,6 +6,7 @@
 //  Copyright © 2017年 Gragrance. All rights reserved.
 //
 
+import Carbon
 import Cocoa
 import EVReflection
 import Swinject
@@ -29,6 +30,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return Settings()
         }.inObjectScope(.container)
 
+        // Singleton
+        container.register(PreferenceWindowController.self) { _ in
+            let wvc = PreferenceWindowController(windowNibName: NSNib.Name("PreferenceWindow"))
+            wvc.window?.level = NSWindow.Level.floating
+            return wvc
+        }.inObjectScope(.container)
+
         // scope
         container.register(Recognizer.self) { r in
             let settings = r.resolve(Settings.self)!
@@ -36,7 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 return BaiduRecognizer()
             }
 
-            return BaiduRecognizer()
+            return GoogleVisionRecognizer()
         }
         return container
     }()
@@ -45,6 +53,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // initialize status bar
         PrintOptions.Active = [.ShouldExtendNSObject, .MissingProtocol, .InvalidType, .InvalidValue, .InvalidClass, .EnumWithoutAssociatedValue]
         _ = container.resolve(StatusBarCenter.self)
+        if let setting = container.resolve(Settings.self),setting.appearence.showInDock{
+            var psn: ProcessSerialNumber = ProcessSerialNumber(highLongOfPSN: 0, lowLongOfPSN: UInt32(kCurrentProcess))
+            TransformProcessType(&psn, ProcessApplicationTransformState(kProcessTransformToForegroundApplication))
+        }
     }
 
     func applicationWillTerminate(_: Notification) {

@@ -27,8 +27,8 @@
              {
              "is_separator": false,
              "title": "首选项",
-             "key": "o",
-             "selector": "option"
+             "key": "p",
+             "selector": "preference"
              },
              {
              "is_separator": false,

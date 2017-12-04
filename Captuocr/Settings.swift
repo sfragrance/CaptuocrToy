@@ -12,6 +12,7 @@ import Foundation
 
 class Settings {
     let appearence: Appearence
+    /// life circle with app
     var baiduocr_access_token: String?
     init() {
         let path = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
@@ -24,5 +25,14 @@ class Settings {
         }
 
         appearence = _appearence
+    }
+
+    func save() {
+        var path = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("Captuocr", isDirectory: true)
+        try? FileManager.default.createDirectory(at: path, withIntermediateDirectories: true, attributes: nil)
+        path = path.appendingPathComponent("Appearence.json")
+        let appearenceJson = appearence.toJsonString()
+        try? appearenceJson.write(to: path, atomically: true, encoding: .utf8)
     }
 }
