@@ -21,3 +21,6 @@ BuildArea/autobuild.sh
 
 # Release 
 https://github.com/gragrance/CaptuocrToy/releases 
+
+# Thanks to
+@ryh Provide codes to recognize QR code
