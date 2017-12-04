@@ -11,6 +11,7 @@ import AppKit
 import Async
 import Carbon
 import Foundation
+import CoreImage
 
 class StatusBarCenter {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -57,6 +58,14 @@ class StatusBarCenter {
         }
 
         recognizepic(picPath: picPath)
+    }
+    
+    @objc
+    func captureQRCode() {
+        guard let picPath = Utils.capturePic() else {
+            return
+        }
+        recognizeQRCode(picPath: picPath)
     }
 
     @objc
@@ -139,6 +148,27 @@ class StatusBarCenter {
                     }
                 }
             }
+        }
+    }
+
+    private func recognizeQRCode(picPath: String) {
+        let scanImage = CIImage(contentsOf: URL(fileURLWithPath: picPath))
+        // Extract QR code features
+        let context = CIContext()
+        let options = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
+        let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: context, options: options)!
+        let features = detector.features(in: scanImage!)
+        
+        // Process each QR code found
+        var qrtext:String=""
+        for feature in features as! [CIQRCodeFeature] {
+            qrtext+=feature.messageString! + "\n"
+        }
+        let picData = try? Data(contentsOf: URL(fileURLWithPath: picPath))
+        if let base64 = picData?.base64EncodedString(){
+            self.recognizeVc.viewmodel.image.value = base64
+            self.recognizeVc.viewmodel.recognizedText.value = qrtext
+            self.showPopover()
         }
     }
 

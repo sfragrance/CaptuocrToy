@@ -3,8 +3,14 @@
              {
              "is_separator": false,
              "title": "截图识字",
-             "key": "c",
+             "key": "t",
              "selector": "capturePic"
+             },
+             {
+             "is_separator": false,
+             "title": "截图识别QR",
+             "key": "c",
+             "selector": "captureQRCode"
              },
              {
              "is_separator": false,
