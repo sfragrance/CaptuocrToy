@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView id="8xv-gu-7tT" customClass="HistoryCell" customModule="Captuocr" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BxR-vE-D7k">
+                    <rect key="frame" x="5" y="0.0" width="52" height="52"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bwn-uf-Vaa"/>
+                </imageView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Xdj-su-LJt">
+                    <rect key="frame" x="67" y="27" width="304" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="u1k-kC-TnJ"/>
+                    </constraints>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="ss" id="4Kd-Ng-Qwu">
+                        <font key="font" size="14" name="HelveticaNeue-Bold"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="efH-HZ-L9u">
+                    <rect key="frame" x="67" y="6" width="309" height="18"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="UVa-2S-vMK">
+                        <font key="font" size="12" name="HelveticaNeue"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="BxR-vE-D7k" firstAttribute="leading" secondItem="8xv-gu-7tT" secondAttribute="leading" constant="5" id="DAV-Q6-PP0"/>
+                <constraint firstAttribute="trailing" secondItem="Xdj-su-LJt" secondAttribute="trailing" constant="5" id="Ezh-ve-Euv"/>
+                <constraint firstAttribute="trailing" secondItem="efH-HZ-L9u" secondAttribute="trailing" id="JKr-0V-Mgv"/>
+                <constraint firstItem="efH-HZ-L9u" firstAttribute="top" secondItem="Xdj-su-LJt" secondAttribute="bottom" constant="3" id="Uxy-dI-6b6"/>
+                <constraint firstItem="efH-HZ-L9u" firstAttribute="leading" secondItem="BxR-vE-D7k" secondAttribute="trailing" constant="12" id="aqr-NV-6IQ"/>
+                <constraint firstItem="Xdj-su-LJt" firstAttribute="leading" secondItem="BxR-vE-D7k" secondAttribute="trailing" constant="12" id="eVa-tU-dV5"/>
+                <constraint firstAttribute="bottom" secondItem="BxR-vE-D7k" secondAttribute="bottom" id="lrf-xj-irn"/>
+                <constraint firstItem="BxR-vE-D7k" firstAttribute="width" secondItem="8xv-gu-7tT" secondAttribute="height" multiplier="1:1" id="pJD-OU-Wnw"/>
+                <constraint firstItem="BxR-vE-D7k" firstAttribute="top" secondItem="8xv-gu-7tT" secondAttribute="top" id="szK-Y7-5R4"/>
+                <constraint firstItem="Xdj-su-LJt" firstAttribute="top" secondItem="8xv-gu-7tT" secondAttribute="top" constant="5" id="znK-nk-icn"/>
+            </constraints>
+            <connections>
+                <outlet property="img" destination="BxR-vE-D7k" id="xd3-Fu-KZo"/>
+                <outlet property="tfAt" destination="efH-HZ-L9u" id="YFE-yZ-bzU"/>
+                <outlet property="tfMain" destination="Xdj-su-LJt" id="e24-bp-1QW"/>
+            </connections>
+            <point key="canvasLocation" x="-8" y="227"/>
+        </tableCellView>
+    </objects>
+</document>

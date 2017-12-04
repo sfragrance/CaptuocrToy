@@ -19,11 +19,13 @@ class StatusBarCenter {
     var recognizeVc: RecognizeBoxViewController
     let setting: Settings
     let menuinfos: [MenuInfo]
+    let historyCenter: HistoryCenter
     init(minfos: [MenuInfo]) {
         setting = AppDelegate.container.resolve(Settings.self)!
+        historyCenter = AppDelegate.container.resolve(HistoryCenter.self)!
         popover.behavior = .transient
         recognizeVc = RecognizeBoxViewController(nibName: NSNib.Name("RecognizeBox"), bundle: Bundle.main)
-        self.popover.contentViewController = self.recognizeVc
+        popover.contentViewController = recognizeVc
         menuinfos = minfos
         let icon = NSImage(named: NSImage.Name("icons8-text-16"))
         icon?.isTemplate = true
@@ -77,6 +79,13 @@ class StatusBarCenter {
     }
 
     @objc
+    func history() {
+        if let windowController = AppDelegate.container.resolve(HistoryWindowController.self) {
+            windowController.showWindow(self)
+        }
+    }
+
+    @objc
     func preference() {
         if let windowController = AppDelegate.container.resolve(PreferenceWindowController.self) {
             windowController.reload()
@@ -105,18 +114,24 @@ class StatusBarCenter {
                         self.statusItem.image = NSImage(named: NSImage.Name("icons8-text-16"))
                         self.statusItem.title = nil
                         self.recognizeVc = RecognizeBoxViewController(nibName: NSNib.Name("RecognizeBox"), bundle: Bundle.main)
+                        self.recognizeVc.view.frame = NSRect(x: 0, y: 0, width: 834, height: 474)
                         self.popover.contentViewController = self.recognizeVc
                         self.recognizeVc.viewmodel.image.value = base64
                         self.recognizeVc.viewmodel.recognizedText.value = final
                         self.showPopover()
                     }
-
+                    let record = HistoryRecord()
+                    record.txt = final
+                    record.imgBase64 = base64
+                    record.type = .ocr
+                    self.historyCenter.addRecord(record: record)
                 } catch {
                     print(error)
                     Async.main {
                         self.statusItem.image = NSImage(named: NSImage.Name("icons8-text-16"))
                         self.statusItem.title = nil
                         self.recognizeVc = RecognizeBoxViewController(nibName: NSNib.Name("RecognizeBox"), bundle: Bundle.main)
+                        self.recognizeVc.view.frame = NSRect(x: 0, y: 0, width: 834, height: 474)
                         self.popover.contentViewController = self.recognizeVc
                         self.recognizeVc.viewmodel.image.value = base64
                         self.recognizeVc.viewmodel.recognizedText.value = error.localizedDescription

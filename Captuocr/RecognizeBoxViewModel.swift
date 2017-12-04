@@ -16,7 +16,7 @@ class RecognizeBoxViewModel {
 
 extension RecognizeBoxViewController {
     func bindViewModel() {
-        if let setting = AppDelegate.container.resolve(Settings.self){
+        if let setting = AppDelegate.container.resolve(Settings.self) {
             textArea.font = NSFont.userFont(ofSize: CGFloat(setting.appearence.fontsize))
         }
         viewmodel.recognizedText.bind(to: textArea.reactive.string).dispose(in: layout.bag)

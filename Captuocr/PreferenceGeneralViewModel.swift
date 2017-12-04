@@ -31,16 +31,16 @@ extension PreferenceGeneralViewController {
             if v {
                 var psn: ProcessSerialNumber = ProcessSerialNumber(highLongOfPSN: 0, lowLongOfPSN: UInt32(kCurrentProcess))
                 TransformProcessType(&psn, ProcessApplicationTransformState(kProcessTransformToForegroundApplication))
-            } /*else {
-                TransformProcessType(&psn, ProcessApplicationTransformState(kProcessTransformToUIElementApplication))
-            }*/
+            } /* else {
+             TransformProcessType(&psn, ProcessApplicationTransformState(kProcessTransformToUIElementApplication))
+             } */
         }.dispose(in: checkShowInDock.reactive.bag)
-        viewmodel.fontSize.map{"\($0)"}.bind(to: tfFontsize.reactive.stringValue).dispose(in: self.tfFontsize.bag)
-        stepperFontsize.reactive.controlEvent.observeNext { (_) in
+        viewmodel.fontSize.map { "\($0)" }.bind(to: tfFontsize.reactive.stringValue).dispose(in: tfFontsize.bag)
+        stepperFontsize.reactive.controlEvent.observeNext { _ in
             self.viewmodel.fontSize.value = self.stepperFontsize.doubleValue
             self.setting.appearence.fontsize = self.viewmodel.fontSize.value
             self.setting.save()
-        }.dispose(in: self.stepperFontsize.reactive.bag)
+        }.dispose(in: stepperFontsize.reactive.bag)
     }
 
     func initialize() {

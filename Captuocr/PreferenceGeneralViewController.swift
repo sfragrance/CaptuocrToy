@@ -14,7 +14,7 @@ class PreferenceGeneralViewController: NSViewController {
     @IBOutlet var stepperFontsize: NSStepper!
     @IBOutlet var checkShowInDock: NSButton!
     @IBOutlet var checkEnableQRcode: NSButton!
-    @IBOutlet weak var labelNextTime: NSTextField!
+    @IBOutlet var labelNextTime: NSTextField!
     let viewmodel = PreferenceGeneralViewModel()
     var setting: Settings!
     override func viewDidLoad() {

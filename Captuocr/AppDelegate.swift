@@ -29,12 +29,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         container.register(Settings.self) { _ in
             return Settings()
         }.inObjectScope(.container)
+        // Singleton
+        container.register(HistoryCenter.self) { _ in
+            return HistoryCenter()
+        }.inObjectScope(.container)
 
         // Singleton
         container.register(PreferenceWindowController.self) { _ in
             let wvc = PreferenceWindowController(windowNibName: NSNib.Name("PreferenceWindow"))
             wvc.window?.level = NSWindow.Level.floating
             return wvc
+        }.inObjectScope(.container)
+
+        // Singleton
+        container.register(HistoryWindowController.self) { _ in
+            let hvc = HistoryWindowController(windowNibName: NSNib.Name("HistoryWindow"))
+            hvc.window?.level = NSWindow.Level.floating
+            return hvc
         }.inObjectScope(.container)
 
         // scope
@@ -53,10 +64,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // initialize status bar
         PrintOptions.Active = [.ShouldExtendNSObject, .MissingProtocol, .InvalidType, .InvalidValue, .InvalidClass, .EnumWithoutAssociatedValue]
         _ = container.resolve(StatusBarCenter.self)
-        if let setting = container.resolve(Settings.self),setting.appearence.showInDock{
+        if let setting = container.resolve(Settings.self), setting.appearence.showInDock {
             var psn: ProcessSerialNumber = ProcessSerialNumber(highLongOfPSN: 0, lowLongOfPSN: UInt32(kCurrentProcess))
             TransformProcessType(&psn, ProcessApplicationTransformState(kProcessTransformToForegroundApplication))
         }
+
+        _ = container.resolve(HistoryCenter.self)
     }
 
     func applicationWillTerminate(_: Notification) {

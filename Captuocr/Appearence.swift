@@ -15,7 +15,7 @@ class Appearence: EVObject {
     var baidu_appsecret: String?
     var google_appsecret: String?
     var isKeyGlobal = false
-    var fontsize :Double = 13
+    var fontsize: Double = 13
     var showInDock = false
     var enableQrcode = false
     required init() {
