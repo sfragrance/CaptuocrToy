@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Captuocr
+
+  Created by Syed Askari on 12/4/17.
+  Copyright © 2017 Gragrance. All rights reserved.
+*/
+
+"截图识字" = "Crop";
+"选择文件" = "Select Pic";
+"识别结果" = "History";
+"首选项" = "Option";
+"退出" = "Quit";
+"选择图片" = "Select Image";
+

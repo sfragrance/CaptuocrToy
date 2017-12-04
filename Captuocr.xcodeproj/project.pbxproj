@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36B65BCA1FD54671002C53A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36B65BC91FD54671002C53A2 /* Localizable.strings */; };
 		520789201FD1533200453091 /* RecognizeBoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207891F1FD1533200453091 /* RecognizeBoxViewModel.swift */; };
 		5219A08E1FD3BB5A00725B9E /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219A08D1FD3BB5A00725B9E /* DoubleExtension.swift */; };
 		5219A09D1FD3EDC600725B9E /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219A09B1FD3EDC600725B9E /* PreferenceWindowController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		1D39AE7508002C287547EF02 /* Pods_Captuocr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Captuocr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36B65BC91FD54671002C53A2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		5207891F1FD1533200453091 /* RecognizeBoxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeBoxViewModel.swift; sourceTree = "<group>"; };
 		5219A08D1FD3BB5A00725B9E /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		5219A09B1FD3EDC600725B9E /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				5252744F1FCF9CB900C6EC4D /* Info.plist */,
 				525274501FCF9CB900C6EC4D /* Captuocr.entitlements */,
 				529AEC961FD0051C00528691 /* MenuInfo.json */,
+				36B65BC91FD54671002C53A2 /* Localizable.strings */,
 			);
 			path = Captuocr;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				52E015F31FD13F0900F67BED /* RecognizeBox.xib in Resources */,
 				5219A0A61FD419F100725B9E /* PreferenceOcrapiView.xib in Resources */,
 				5219A09E1FD3EDC600725B9E /* PreferenceWindow.xib in Resources */,
+				36B65BCA1FD54671002C53A2 /* Localizable.strings in Resources */,
 				5278D2551FD4F6A60015EE78 /* HistoryWindow.xib in Resources */,
 				5252744B1FCF9CB900C6EC4D /* Assets.xcassets in Resources */,
 				529AEC971FD0051C00528691 /* MenuInfo.json in Resources */,
