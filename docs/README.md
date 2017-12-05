@@ -1,7 +1,7 @@
 # CaptuocrToy
 A tool to capture screenshot and recognize text by online ocr apis .
 
-其他语言：[简体中文](README.zh-cn.md)
+Other Languages：[简体中文](README.zh-cn.md)
 
 # Screenshot
 
@@ -16,7 +16,7 @@ A tool to capture screenshot and recognize text by online ocr apis .
     - ```git clone https://github.com/gragrance/CaptuocrToy.git```  
 
 3. Build
-```bash
+```
 cd CaptuocrToy
 pod update
 BuildArea/autobuild.sh
